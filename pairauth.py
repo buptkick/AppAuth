@@ -115,7 +115,6 @@ def pair_predict(data, FeaturesPair_data, hash_label_list, label_hash_list):
         print ('\n')
     except Exception as e:
         print (e)
-        error = error+ 1
         print ('error!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
 
 
