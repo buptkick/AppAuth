@@ -32,13 +32,13 @@ def cross_validation(data, auth_num):
     print (column_names[0:5])
     column_names = column_names[1:-2]
     print (len(column_names))
-    train_labels = data[36]
+    train_labels = data[35]
     train_apk = data[0]
 
     if all_feature:
         train = data.iloc[:,1:-2]
     else:
-        train = data.iloc[:,21:-2]
+        train = data.iloc[:,20:-2]
         
     train_labels = train_labels.apply(lambda x:int(x))
     train_labels = np.array(train_labels, dtype=int)
@@ -70,7 +70,7 @@ def cross_validation(data, auth_num):
             'min_data_in_bin':1,
         }
     num_round = 10000
-    lgb.cv(params, dtrain, num_round, nfold=5, early_stopping_rounds=50)
+    lgb.cv(params, dtrain, num_round, nfold=10, early_stopping_rounds=50)
 
 
 def main():

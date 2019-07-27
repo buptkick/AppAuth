@@ -326,7 +326,8 @@ def parseClass(dexClassDefObj, dex_object):
     
 def parseDexSmali(lrd, res):
     
-    dexFeature = {'ownClassRatio':0.0, 'absClassRatio':0.0, 
+    dexFeature = {#'ownClassRatio':0.0,
+                  'absClassRatio':0.0, 
                   'antClassRatio':0.0, 'infClassRatio':0.0, 
                   'drtMethodRatio':0.0, 'vtlMethodRatio':0.0, 
                   'trcMethodRatio':0.0, 'dbiMethodRatio':0.0, 
@@ -442,7 +443,7 @@ def parseDexSmali(lrd, res):
     agpNum = dexFeature['aInsDict']['agNum'] + dexFeature['aInsDict']['apNum']
     dexFeature['agetRatio'] = float(dexFeature['aInsDict']['agNum']) / agpNum
 
-    dexFeature['ownClassRatio'] = float(ownClassNum) / allClassNum
+#    dexFeature['ownClassRatio'] = float(ownClassNum) / allClassNum
     
     dexFeature['absClassRatio'] = float(absClassNum) / ownClassNum
     
@@ -463,7 +464,8 @@ def parseDexSmali(lrd, res):
 
 def parseDexSmaliAll(lrd, res):
     
-    dexFeature = {'ownClassRatio':0.0, 'absClassRatio':0.0, 
+    dexFeature = {#'ownClassRatio':0.0,
+                  'absClassRatio':0.0, 
                   'antClassRatio':0.0, 'infClassRatio':0.0, 
                   'drtMethodRatio':0.0, 'vtlMethodRatio':0.0, 
                   'trcMethodRatio':0.0, 'dbiMethodRatio':0.0, 
@@ -570,7 +572,7 @@ def parseDexSmaliAll(lrd, res):
     agpNum = dexFeature['aInsDict']['agNum'] + dexFeature['aInsDict']['apNum']
     dexFeature['agetRatio'] = float(dexFeature['aInsDict']['agNum']) / agpNum
 
-    dexFeature['ownClassRatio'] = float(ownClassNum) / allClassNum
+#    dexFeature['ownClassRatio'] = float(ownClassNum) / allClassNum
     
     dexFeature['absClassRatio'] = float(absClassNum) / ownClassNum
     

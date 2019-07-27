@@ -25,16 +25,16 @@ def pair_predict(data, FeaturesPair_data, hash_label_list, label_hash_list):
     try:
         datanew = data
         
-        l = datanew[37]
+        l = datanew[36]
         l = list(set(l))
         
-        datanew[37] = datanew[37].apply( lambda x:0 if  x==l[0] else 1)
-        p = datanew[37]
+        datanew[36] = datanew[36].apply( lambda x:0 if  x==l[0] else 1)
+        p = datanew[36]
         p = list(set(p))
         column_names = data.columns.values.tolist()
         column_names = column_names[1:-2]
         
-        train_labels = datanew[37]
+        train_labels = datanew[36]
         train = datanew.iloc[:,1:-2]
         train_labels = train_labels.apply(lambda x:int(x))
         train_labels = np.array(train_labels, dtype=int)
@@ -82,8 +82,8 @@ def pair_predict(data, FeaturesPair_data, hash_label_list, label_hash_list):
         
         pred_test = model.predict(X_test)
 
-        pair1 =  (str(FeaturesPair_data.iloc[0:1,37].values[0]))
-        pair2 =  (str(FeaturesPair_data.iloc[1:2,37].values[0]))
+        pair1 =  (str(FeaturesPair_data.iloc[0:1,36].values[0]))
+        pair2 =  (str(FeaturesPair_data.iloc[1:2,36].values[0]))
         
         label1 = hash_label_list[pair1.upper()]
         label2 = hash_label_list[pair2.upper()]
